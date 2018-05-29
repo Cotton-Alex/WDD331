@@ -1,0 +1,176 @@
+/*
+Download the HTML (Links to an external site.)Links to an external site. file.
+Carefully review the html, understand the purpose of every line.
+Review the mockups for both small (Links to an external site.)Links to an external site. and large screens (Links to an external site.)Links to an external site..
+Create a css file without modifying the html.
+Match the mockups in layout and styling.
+Write responsive code.*
+Validate as html5 and css3.
+Build the small screen first then adjust for the large view.
+Details
+- Use Lora font for the headlines, found on Google fonts.
+- Use the font list "Helvetica, Arial, sans-serif" for the body copy, 
+- Use blue color #6495ED.
+- Use #FAEBD7 for the blue sidebar background color and text color.
+Behavior for navigation links
+-- Normal and visited: #FAEBD7 and no underline.
+- Active: #DEB887.
+- Hover: white and underlined.
+Behavior for other page links
+- Normal and visited: #6495ED and no underline.
+- Active: #DEB88.
+- Hover: underlined.
+Behavior for article title links
+- Normal and visited: black and no underline.
+- Active: #DEB887.
+- Hover: #6495ED and underlined.*/
+
+@import url('https://fonts.googleapis.com/css?family=Lora:400');
+
+body {
+    background: #FAEBD7;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 1024px;
+}
+
+body div {
+    background: #6495ED;
+}
+
+header {
+    width: 100%;
+    background: #6495ED;
+    text-align: right;
+    color: #FAEBD7;
+    padding: 25px 0px 25px 0px;
+    margin: 0;
+}
+
+header a {
+    color: #FAEBD7;
+    text-decoration: none;
+    padding-right: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora';
+}
+
+hr {
+    /*align: center;*/
+    color: #FAEBD7;
+    /*max-width: 270px;*/
+    margin: 15px 30px;
+}
+
+nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+nav a:active {
+    color: #DEB887;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+li {
+    line-height: 2;
+}
+
+main {
+    background: #FAEBD7;
+    padding: 25px;
+}
+
+article {
+    background: white;
+    margin-bottom: 35px;
+    padding: 35px;
+    box-shadow: 3px 3px 3px lightgray;
+}
+
+.post-date {
+    color: gray;
+    background-color: white;
+}
+
+.post-content h2 a {
+    font-size: 1.1em;
+    color: black;
+}
+
+.post-content h2 a:hover {
+    font-size: 1.1em;
+    color: #6495ED;
+    text-decoration: underline;
+}
+
+.post-content h2 a:active {
+    font-size: 1.1em;
+    color: #DEB887;
+    text-decoration: none;
+}
+
+figure {
+    /*width: 100%;*/
+    margin-top: 60px;
+}
+
+img {display: block;
+     margin: auto;
+     width: 100%;
+     max-width: 250px;
+}
+
+p a {
+    color: #6495ED;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+p a:active {
+    text-decoration: none;
+    color: #DEB887;
+}
+
+@media (min-width: 1000px) {
+    header {
+        width: 235px;
+        height: 100vh;
+        float: left;
+        display: inline-block;
+        padding: 25px 40px 0px 0px;
+        position: fixed; }
+
+    header a {
+        padding-right: 0px;
+        /*margin-right: 40px;*/ }
+
+    header h1 a{
+        padding-left: 40px;
+        /*margin-right: 40px;*/ }
+
+    hr {
+        /*padding-right: 0px;*/
+        margin-right: 0px;
+        margin-left: 40px; }
+
+    main {
+        margin-right: 50px;
+        float: right;
+        display: inline-block; }
+
+    article {
+        max-width: 530px;
+        margin-top: 20px; }
+}

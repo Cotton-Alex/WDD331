@@ -1,0 +1,52 @@
+form>p {
+    background: red;
+}
+
+form p {
+    background: lightgreen;
+}
+
+/*span help {
+    background: pink;
+}*/
+
+span.help {
+    background: orange;
+}
+
+fieldset:not(:first-of-type) {
+    background: yellow;
+}
+
+input:required:invalid {
+  border-color: purple;
+  border-width: 8px;
+}
+
+[title*=field] {
+    border-color: dodgerblue;
+    border-width: 8px;
+}
+
+li:nth-child(n+6) {
+    font-weight: bold;
+}
+
+label ~ input {
+    color: magenta;
+    font-weight: bold;
+}
+
+label::firstletter {
+    color: lightpink;
+    font-size: 5em;
+}
+
+li:nth-child(5n){
+    font-size: 5em;
+}
+
+fieldset[title=fieldset2] > p + p {
+    color: red;
+    font-size: 5em;
+}

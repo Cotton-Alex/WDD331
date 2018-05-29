@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400');
+
+//COLORS
+$tan: #FAEBD7;
+$blue: #6495ED;
+$sand: #DEB887;
+
+body {
+    background: $tan;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 1024px;
+    div {
+        background: $blue; } }
+
+header {
+    background: $blue;
+    text-align: right;
+    color: $tan;
+    padding: 25px 0px 25px 0px;
+    margin: 0;
+    a {
+        color: $tan;
+        text-decoration: none;
+        padding-right: 30px; } }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora';
+}
+
+hr {
+    color: $tan;
+    margin: 15px 30px;
+}
+
+nav a {
+    &:hover {
+        color: white;
+        text-decoration: underline; }
+    &:active {
+        color: $sand;
+        text-decoration: none; } }
+
+ul {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+li {
+    line-height: 2;
+}
+
+main {
+    background: $tan;
+    padding: 25px;
+}
+
+article {
+    background: white;
+    margin-bottom: 35px;
+    padding: 35px;
+    box-shadow: 3px 3px 3px lightgray;
+}
+
+.post-date {
+    color: gray;
+    background-color: white;
+}
+
+.post-content h2 a {
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+    &:hover {
+        color: $blue;
+        text-decoration: underline; }
+    &:active {
+        color: $sand;
+        text-decoration: none; } }
+
+figure {
+    margin-top: 60px;
+}
+
+img {
+    display: block;
+    margin: auto;
+    max-width: 250px;
+}
+
+p a {
+    color: $blue;
+    &:hover {
+        text-decoration: underline; }
+    &:active {
+        text-decoration: none;
+        color: $sand; } }
+
+@media (min-width: 1000px) {
+    header {
+        width: 235px;
+        height: 100vh;
+        float: left;
+        display: inline-block;
+        padding: 25px 40px 0px 0px;
+        position: fixed;
+        a {
+            padding-right: 0px; }
+        h1 a{
+            padding-left: 40px; } }
+
+    hr {
+        margin-right: 0px;
+        margin-left: 40px;
+    }
+
+    main {
+        margin-right: 50px;
+        float: right;
+        display: inline-block;
+    }
+
+    article {
+        max-width: 530px;
+        margin-top: 20px;
+    } 
+}
+
+@mixin width-100 {
+    $width: 100%; }
+
+header, body, img {@include width-100;}
+
+@mixin no_txt_decorate {
+    $text-decoration: none; }
+
+header a, nav a:active, ul, .post-content h2 a:active, p a:active {@include no_txt_decorate;}
