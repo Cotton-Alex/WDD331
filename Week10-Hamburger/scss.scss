@@ -1,0 +1,104 @@
+body {
+    display:flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0%;
+    padding: .5em;
+    width: 7em;
+    height: 200%;
+    font-size: 1.3em;
+    background-color: black;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(.8,0,.2,1);
+    a {
+        text-decoration: none;
+        color: gray;
+        transition: color 0.3s ease;
+        &:hover {
+            color: skyblue;
+        }
+    }
+    ul {
+        margin: 0 0 0 1.5em;
+        padding: 0;
+        list-style-type: none;
+    }
+    li {
+        display:block;
+        height: 2em;
+    }
+}
+.burger {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    height: 1em;
+    width: 1.5em;
+    transform: translate(8em, 0);
+    transition: transform 0.5s cubic-bezier(.8,0,.2,1);
+    &:hover {
+        span {
+            background-color: skyblue;
+        }
+    }
+    span {
+        display: block;
+        position: absolute;
+        height: .2em;
+        width: 1.5em;
+        border-radius: 1em;
+        border-style: 0;
+        margin: 0 auto;
+        transform: translate(0%, 200%);
+        background-color: gray;
+        transition: transform 0.5s cubic-bezier(.8,0,.2,1);
+        &:first-child {
+            width: 1.5em;
+            transform: translate(0%, 0%);
+        }
+        &:last-child {
+            width: 1.5em;
+            transform: translate(0%, 400%);
+        }
+    }
+}
+.sectionOne {
+    margin: 3em 0 0 -2em;
+    transition: transform 0.5s cubic-bezier(.8,0,.2,1);
+}
+
+//------------------------------------OPEN------------------------------------//
+
+nav.open {
+    transform: translate( 0, 0);
+    transition: transform 0.5s cubic-bezier(.8,0,.2,1);
+}
+.burger.open {
+    transform: translate(5.5em, 0);
+    transition: transform 0.5s cubic-bezier(.8,0,.2,1);
+    span {
+        transform: translate(0%, 200%);
+        transform: rotate(135deg) translate(15%, -120%);
+        transition: transform 0.5s cubic-bezier(.8,0,.2,1);
+        &:first-child {
+            transform: rotate(45deg) translate(15%, 120%);
+        }
+        &:last-child {
+            transform: rotate(-45deg) translate(-15%, 120%);
+        }
+    }
+}
+.sectionOne.open {
+    transform: translate(5.5em, 0);
+    transition: transform 0.5s cubic-bezier(.8,0,.2,1);
+}
