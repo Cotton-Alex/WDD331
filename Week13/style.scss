@@ -1,0 +1,12 @@
+@import 'partials/twinklingstars';
+
+.stars {
+		&::before {
+			@include stars;
+		}
+}
+.twinkling {
+		&::before {
+			@include twinkling;
+		}
+}

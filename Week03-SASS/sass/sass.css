@@ -1,0 +1,43 @@
+body {
+  background-color: darkred; }
+
+#contactform {
+  background-color: white; }
+  #contactform input, #contactform textarea {
+    background-color: white;
+    flex: 2; }
+  @media (min-width: 20em) {
+    #contactform {
+      width: 100%;
+      max-width: 699px;
+      margin-left: auto;
+      margin-right: auto; } }
+  @media (min-width: 31em) {
+    #contactform {
+      width: 90%;
+      max-width: 899px;
+      margin-left: auto;
+      margin-right: auto; } }
+  @media (min-width: 60em) {
+    #contactform {
+      width: 70%;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto; } }
+
+fieldset > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap; }
+
+#content {
+  width: width;
+  max-width: max-width;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*# sourceMappingURL=sass.css.map */

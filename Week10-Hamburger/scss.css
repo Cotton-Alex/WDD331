@@ -1,0 +1,86 @@
+body {
+  display: flex;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  height: 100vh;
+  justify-content: flex-start;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  width: 100%; }
+
+nav {
+  align-items: flex-start;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3em;
+  height: 200%;
+  margin: 0;
+  padding: .5em;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1);
+  width: 7em; }
+  nav a {
+    color: gray;
+    text-decoration: none;
+    transition: color 0.3s ease; }
+    nav a:hover {
+      color: skyblue; }
+  nav li {
+    display: block;
+    height: 2em; }
+  nav ul {
+    list-style-type: none;
+    margin: 0 0 0 1.5em;
+    padding: 0; }
+
+.burger {
+  cursor: pointer;
+  display: block;
+  height: 1em;
+  position: relative;
+  transform: translate(8em, 0);
+  width: 1.5em; }
+  .burger:hover span {
+    background-color: skyblue; }
+  .burger span {
+    background-color: gray;
+    border-radius: 1em;
+    display: block;
+    height: .2em;
+    margin: 0 auto;
+    position: absolute;
+    transform: translate(0%, 200%);
+    transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1);
+    width: 1.5em; }
+    .burger span:first-child {
+      transform: translate(0, 0);
+      width: 1.5em; }
+    .burger span:last-child {
+      transform: translate(0, 400%);
+      width: 1.5em; }
+
+.sectionOne {
+  margin: 3em 0 0 -2em;
+  transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1); }
+
+nav.open {
+  transform: translate(0, 0);
+  transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1); }
+
+.burger.open {
+  transform: translate(5.5em, 0);
+  transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1); }
+  .burger.open span {
+    transform: translate(0%, 200%);
+    transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1); }
+    .burger.open span:first-child {
+      transform: rotate(45deg) translate(15%, 120%); }
+    .burger.open span:last-child {
+      transform: rotate(-45deg) translate(-15%, 120%); }
+
+.sectionOne.open {
+  transform: translate(5.5em, 0);
+  transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1); }
+
+/*# sourceMappingURL=scss.css.map */
